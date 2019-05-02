@@ -1,0 +1,13 @@
+---
+- name: copy a config of iptables
+  copy:
+    src: ../files/iptables_rules.v4
+    dest: /etc/iptables/rules.v4
+
+- name: enable and restart iptables
+  systemd:
+    name: netfilter-persistent.service
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  become: yes

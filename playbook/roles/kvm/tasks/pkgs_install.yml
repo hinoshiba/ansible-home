@@ -1,0 +1,4 @@
+---
+- name: Install via apt
+  environment: "{{ proxy_env }}"
+  apt: name="{{ kvm_pkgs }}" state=present update_cache=yes

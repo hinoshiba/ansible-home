@@ -1,0 +1,6 @@
+---
+- include: pkgs_install.yml
+- include: iptables.yml
+- include: disable_v6.yml
+- include: ntp.yml
+- include: sshd.yml
